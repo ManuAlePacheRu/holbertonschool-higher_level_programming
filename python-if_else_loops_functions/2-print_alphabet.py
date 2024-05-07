@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for char in range(ord('a'), ord('z')+1):
-    print(f"{chr(char)}", end='')
+for char_code in range(ord('a'), ord('z')+1):
+    char = chr(char_code)
+    print("{}".format(char), end='')
