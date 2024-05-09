@@ -1,5 +1,5 @@
 def islower(c):
-        if c in range (65, 91):
+        if c >= 'a' and c <= 'z':
             return True
         else:
             return False
