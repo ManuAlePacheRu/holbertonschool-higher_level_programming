@@ -4,6 +4,6 @@ for dec in range(0, 9):
         if dec > n or dec == n:
             continue
         if n == 9 and dec ==8:
-            print (f"{dec}{n}")
+            print ("{}{}" .format(dec, n))
         else:
-            print (f"{dec}{n}, ", end="")
+            print ("{}{}, " .format(dec, n), end="")
