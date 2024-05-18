@@ -5,6 +5,6 @@ def safe_print_division(a, b):
         div = a / b
         return div
     except (TypeError, ZeroDivisionError):
-        return 0
+        return None
     finally:
-            print("Inside result: {}".format(div))
+        print("Inside result: {}".format(div))
