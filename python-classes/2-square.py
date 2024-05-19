@@ -26,11 +26,11 @@ class Square:
 
         # Check if size is an integer
         if not isinstance(size, int):
-            raise TypeError("size must be an integer")  # If not, raise a TypeError
+            raise TypeError("size must be an integer")
 
         # Check if size is less than 0
         elif size < 0:
-            raise ValueError("size must be >= 0")  # If it is, raise a ValueError
+            raise ValueError("size must be >= 0")
 
         # If size is an integer and it's not less than 0, assign it to __size
         else:
