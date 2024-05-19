@@ -1,20 +1,37 @@
 #!/usr/bin/python3
-"""__init__
-start method
-Atributtes:
-__size (int): The size of square (private attribute).
+
+"""
+This module defines a class Square.
+
+Attributes:
+    __size (int): The size of the square (private attribute).
 """
 
 
-class Square:  # Define the class Square
-    def __init__(self, size=0):  # Initialization method with a parameter
+class Square:
+    """
+    A class that defines a square.
+
+    Attributes:
+        __size (int): The size of the square (private attribute).
+    """
+
+    def __init__(self, size=0):
         """
+        The constructor for the Square class.
+
         Args:
-        __size (int): The size of square (private attribute)
+            size (int): The size of the square. Defaults to 0.
         """
-        if not isinstance(size, int):  # Check if size is an integer
-            raise TypeError("size must be an integer")  # If not an integer.
-        elif size < 0:  # If size is an integer, less than 0.
-            raise ValueError("size must be >= 0")  # If it's less than 0.
+
+        # Check if size is an integer
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")  # If not, raise a TypeError
+
+        # Check if size is less than 0
+        elif size < 0:
+            raise ValueError("size must be >= 0")  # If it is, raise a ValueError
+
+        # If size is an integer and it's not less than 0, assign it to __size
         else:
-            self.__size = size  # If size is an integer.
+            self.__size = size
