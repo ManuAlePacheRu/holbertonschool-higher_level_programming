@@ -34,3 +34,10 @@ class Square:
         # If size is an integer and it's not less than 0, assign it to __size
         else:
             self.__size = size
+        
+    def area(self):  # Public instance method that calculates the area of the square
+        """
+        This is a public instance method that calculates and returns the area of the square.
+        The area of a square is calculated by multiplying its side size by itself (size * size).
+        """
+        return self.__size * self.__size
