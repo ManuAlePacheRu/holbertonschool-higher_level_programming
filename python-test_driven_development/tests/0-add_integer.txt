@@ -9,7 +9,7 @@
     13
     >>> add_integer(0, 0)
     0
-    >>> add_integer(100.33333333747747, 100.128638712639812)
+    >>> add_integer(100.3333333374774537, 100.928638712639812)
     200
     >>> add_integer('a', 10)
     Traceback (most recent call last):
