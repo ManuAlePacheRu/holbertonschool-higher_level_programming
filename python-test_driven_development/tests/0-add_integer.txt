@@ -9,8 +9,8 @@
     13
     >>> add_integer(0, 0)
     0
-    >>> add_integer(100.3333333374774537, 100.928638712639812)
-    200
+    >>> add_integer(100.333333333333333333, 2.727373543547)
+    102
     >>> add_integer('a', 10)
     Traceback (most recent call last):
     ...
