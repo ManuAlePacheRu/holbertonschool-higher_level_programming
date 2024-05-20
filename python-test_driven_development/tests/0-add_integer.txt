@@ -10,6 +10,8 @@
     >>> add_integer(0, 0)
     0
     >>> add_integer('a', 10)
+    >>> add_integer(100.333333333333333333, 2.727373543547)
+    102
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
