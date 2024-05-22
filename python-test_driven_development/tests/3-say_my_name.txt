@@ -1,0 +1,14 @@
+"""This module print a name and last name"""
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Jhon", "Marston")
+My name is Jhon Marston
+>>> say_my_name("Arthur")
+My name is Arthur 
+>>> say_my_name(14, "Pacheco")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name("Maribelle", 14)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
