@@ -5,4 +5,18 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation("Hello this is the test.")
 Hello this is the test.
+<BLANKLINE>
+>>> text_indentation("Holberton School")
+Holberton School
+>>> text_indentation(".")
+.
+<BLANKLINE>
+>>> text_indentation("")
 
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
