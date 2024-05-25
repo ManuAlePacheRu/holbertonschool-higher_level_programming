@@ -1,12 +1,12 @@
-#!/usr/bin/python3 #It tells the system this script should be run with Python3
+#!/usr/bin/python3
+# It tells the system this script should be run with Python3
+
 class Rectangle:
     """
     Rectangle class
     """
 
     def __init__(self, width=0, height=0):
-        self._width = width
-        self._height = height
         """
         Initializes a new instance of the Rectangle class.
 
@@ -14,6 +14,8 @@ class Rectangle:
             width (int, optional): The width of the rectangle. Defaults to 0.
             height (int, optional): The height of the rectangle. Defaults to 0.
         """
+        self._width = width
+        self._height = height
 
     @property
     def width(self):
@@ -34,7 +36,6 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
         """
-
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -60,7 +61,6 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
         """
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
