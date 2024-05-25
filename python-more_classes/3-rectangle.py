@@ -86,12 +86,16 @@ class Rectangle:
             return 0
         perrec = (self.width + self.height) * 2
         return perrec
+
     def __str__(self):
         """
         Returns a string representation of the rectangle.
 
-        If either the width or height of the rectangle is 0, returns an empty string.
-        Otherwise, returns a string where each row of the rectangle is represented by '#' characters.
+        If either the width or height of the rectangle is 0,
+        returns an empty string.
+
+        Otherwise, returns a string where each row of the rectangle
+        is represented by '#' characters.
 
         Returns:
             str: String representation of the rectangle.
