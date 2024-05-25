@@ -1,17 +1,11 @@
-#!/usr/bin/python3    # This line is called a shebang. It tells the system this script should be run with Python3.
-"""
-Rectangle  class
-"""
-
-
 class Rectangle:
     """
     Rectangle class
     """
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
         """
         Initializes a new instance of the Rectangle class.
 
@@ -19,7 +13,15 @@ class Rectangle:
             width (int, optional): The width of the rectangle. Defaults to 0.
             height (int, optional): The height of the rectangle. Defaults to 0.
         """
-    
+
+    @property
+    def width(self):
+        """
+        Get the width of the rectangle.
+        """
+        return self._width
+
+    @width.setter
     def width(self, value):
         """
         Set the width of the rectangle.
@@ -36,8 +38,16 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
-    
+        self._width = value
+
+    @property
+    def height(self):
+        """
+        Get the height of the rectangle.
+        """
+        return self._height
+
+    @height.setter
     def height(self, value):
         """
         Set the height of the rectangle.
@@ -54,4 +64,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        self._height = value
