@@ -1,3 +1,4 @@
+#!/usr/bin/python3 #It tells the system this script should be run with Python3
 class Rectangle:
     """
     Rectangle class
