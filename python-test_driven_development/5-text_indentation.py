@@ -24,4 +24,3 @@ def text_indentation(text):
         if i == "." or i == "?" or i == ":":
             print()
             print()
-  
