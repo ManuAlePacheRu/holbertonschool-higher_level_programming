@@ -110,6 +110,7 @@ class Rectangle:
         Returns the rectangle in a string representation.
         """
         return f"Rectangle({self.width}, {self.height})"
+
     def __del__(self):
         """
         Prints a message when an instance of Rectangle is deleted
