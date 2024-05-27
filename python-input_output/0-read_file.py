@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+"""Function that read and print file content"""
+
 
 def read_file(filename=""):
     """
     Read a text file and print its content to stdout.
 
     Args:
-        filename (str): The path to the file to be read. Defaults to an empty string.
+        filename (str): The path to the file to be read.
 
     Returns:
         None
@@ -13,6 +15,5 @@ def read_file(filename=""):
     Raises:
         FileNotFoundError: If the specified file does not exist.
     """
-    with open(filename, 'r', encoding="utf-8") as file:
-        for line in file:
-            print(line, end='')
+    with open(filename, 'r', encoding="utf-8") as fileread:
+        print(fileread.read(), end='')
