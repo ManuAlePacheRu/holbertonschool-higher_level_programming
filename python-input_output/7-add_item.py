@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+"""すべての引数をPythonリストに書き込んでファイルに保存します"""
+
 import os
 import json
 from sys import argv
-
-"""すべての引数をPythonリストに書き込んでファイルに保存します"""
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
