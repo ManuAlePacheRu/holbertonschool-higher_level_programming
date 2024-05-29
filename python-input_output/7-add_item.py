@@ -24,5 +24,4 @@ if os.path.isfile(filename):
     save_to_json_file(arg_listy, filename)
 else:
     # ファイルが存在しない場合は、新しいリストを保存
-    print(arg_list)
     save_to_json_file(arg_list, filename)
