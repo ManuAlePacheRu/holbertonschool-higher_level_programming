@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import pickle
 
+
 class CustomObject:
     """
     A class to represent a custom object.
@@ -37,7 +38,7 @@ class CustomObject:
         Serialize the CustomObject and save it to a file.
 
         Args:
-            filename (str): The name of the file to save the serialized object
+            filename: The name of the file to save the serialized object.
         """
         with open(filename, 'wb') as newfile:
             pickle.dump(self, newfile)
