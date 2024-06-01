@@ -1,18 +1,18 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from json import dump, load
 
 
-"""基本的なシリアル化モジュールを追加する"""
+"""A basic serialization module."""
 
 
-def シリアライズしてファイルに保存(data, filename):
-    """シリアライズ"""
-    with open(filename, 'w', encoding="UTF-8") as ファイル新:
-        dump(data, ファイル新)
+def serialize_and_save_to_file(data, filename):
+    """Serialize data and save to a file."""
+    with open(filename, 'w', encoding="UTF-8") as newfile1:
+        dump(data, newfile1)
 
 
 def load_and_deserialize(filename):
-    """読み込みとデシリアライズ"""
-    with open(filename, 'r', encoding="utf-8") as ファイル新:
-        return load(ファイル新)
+    """Load and deserialize data from a file."""
+    with open(filename, 'r', encoding="utf-8") as newfile2:
+        return load(newfile2)
