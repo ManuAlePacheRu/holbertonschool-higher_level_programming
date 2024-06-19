@@ -1,7 +1,7 @@
 -- Create a table in the database passed as argument
 
 SET @database_name_get := DATABASE()
-SET @create_table_new := CONCAT('CREATE TABLE IF NOT EXISTS ', @database_name, '.first_table (
+SET @create_table_new := CONCAT('CREATE TABLE IF NOT EXISTS ', @database_name_get, '.first_table (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(256) NOT NULL
 )');
