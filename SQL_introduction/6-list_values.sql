@@ -1,3 +1,3 @@
 -- Select all rows from a table
 
-SELECT * FROM first_table;
+SHOW COLUMNS FROM first_table;
