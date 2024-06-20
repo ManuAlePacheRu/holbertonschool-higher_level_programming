@@ -1,1 +1,3 @@
-SELECT * FROM first_table;
+-- Select all rows from a table
+
+ELECT * FROM first_table;
