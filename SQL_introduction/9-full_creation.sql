@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS second_table (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(256) NOT NULL,
     score INT
-)
+);
 
 INSERT INTO second_table (id, name, score)
 VALUES(1, 'John', 10)
