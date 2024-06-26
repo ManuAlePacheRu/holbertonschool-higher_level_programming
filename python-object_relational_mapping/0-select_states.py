@@ -8,18 +8,21 @@ This module show all states from the database given trough command line
 import MySQLdb  # Import MySQLdb library for MySQL database interaction
 import sys  # Import sys module for accessing command-line arguments
 
+
 def get_states():
     """
-    Connects to a MySQL database and retrieves all states from the 'states' table.
+    Connects to a MySQL database and retrieves all states
+    from the 'states' table.
 
-    Assumes MySQL username, password, and database name are provided as command-line arguments.
+    Assumes MySQL username, password, and database name are 0
+    provided as command-line arguments.
     """
     conn = MySQLdb.connect(
-        host="localhost",  # MySQL server host
-        port=3306,  # MySQL server port
-        user=sys.argv[1],  # MySQL username (provided as command-line argument)
-        passwd=sys.argv[2],  # MySQL password (provided as command-line argument)
-        db=sys.argv[3],  # MySQL database name (provided as command-line argument)
+        host="localhost",  # server host
+        port=3306,  # server port
+        user=sys.argv[1],  # username (provided as command-line argument)
+        passwd=sys.argv[2],  # password (provided as command-line argument)
+        db=sys.argv[3],  # database name (provided as command-line argument)
         charset="utf8"  # Character encoding for the connection
     )
 
@@ -41,6 +44,7 @@ def get_states():
 
     # Close the database connection
     conn.close()
+
 
 if __name__ == '__main__':
     get_states()
