@@ -28,9 +28,17 @@ def get_states():
 
     # Create a cursor object to execute SQL queries
     cur = conn.cursor()
-    
+    arg = sys.argv[4]
+
+    checkq = """
+                SELECT *
+                FROM states
+                WHERE BINARY name = '{}'
+                ORDER BY id ASC
+                """.format(arg)
+
     # Execute SQL query to select states starting with 'N'
-    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
+    cur.execute(checkq)
 
     # Fetch all rows from the executed query
     query_rows = cur.fetchall()
