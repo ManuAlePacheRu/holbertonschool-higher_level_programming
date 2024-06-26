@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+
+'''
+This module show all states from the database given trough command line
+'''
+
 # Establish connection to MySQL database using command-line arguments
 import MySQLdb  # Import MySQLdb library for MySQL database interaction
 import sys  # Import sys module for accessing command-line arguments
