@@ -15,13 +15,14 @@ def generate_invitations(template, attendees):
             print(type(element).__name__)
             return
 
-    if not template.strip():
-        print("Error: Template is empty")
+    if not template():
+        print("Template is empty, no output files generated.")
         return
 
     if not attendees():
-        print("Error: Attendees is empty") 
+        print("No data provided, no output files generated.") 
         return
+    
     inv = []
 
     for attendee in attendees:
