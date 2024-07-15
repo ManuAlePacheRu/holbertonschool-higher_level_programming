@@ -16,17 +16,17 @@ def generate_invitations(template, attendees):
     if not attendees:
         print("Error: Attendees is empty") 
         return
-    inv = []
+
+    def check_make_file(template):
+        # TODO: RESCRIBIR
+        for idx in te:
+            output_file = f"output_{idx}.txt"
+        # TODO: RESCRIBIR
+        with open(output_file, 'w') as file:
+            file.write(template)
 
     for attendee in attendees:
         my_template = Template(template)
         atendee_data = {key: attendee.get(key, "N/A") for key in attendee}
         new_template = my_template.safe_substitute(atendee_data)
-        inv.append(new_template)
-        return inv
-
-    def check_make_file(num):
-        for idx, inv in enumerate(inv, start=1):
-            output_file = f"output_{idx}.txt"
-        with open(output_file, 'w') as file:
-            file.write(inv)
+        check_make_file(new_template)
