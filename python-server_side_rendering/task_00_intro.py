@@ -20,13 +20,9 @@ def generate_invitations(template, attendees):
     inv = []
 
     for attendee in attendees:
-        atendee_data = {
-            'name': attendee.get('name', 'N/A'),
-            'event_title': attendee.get('event_title', 'N/A'),
-            'event_date': attendee.get('event_date', 'N/A'),
-            'event_location': attendee.get('event_location', 'N/A')
-        }
-        new_template = Template.safe_substitute(atendee_data)
+        my_template = Template(template)
+        atendee_data = {key: attendee.get(key, "N/A") for key in attendee}
+        new_template = my_template.safe_substitute(atendee_data)
         inv.append(new_template)
         return inv
 
