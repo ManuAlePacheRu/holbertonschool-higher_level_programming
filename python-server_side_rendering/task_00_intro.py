@@ -5,30 +5,24 @@ import os
 def generate_invitations(template, attendees):
     
     if not isinstance(template, str):
-        print(type(template).__name__)
+        print("Error: Template is not a string")
         return
     if not isinstance(attendees, list):
-        print(type(attendees).__name__)
+        print("Error: attendees  is not a list of dictionaries")
         return
-    for element in attendees:
-        if not isinstance(element, dict):
-            print(type(element).__name__)
-            return
-
-    if not template():
-        print("Template is empty, no output files generated.")
+    if not template.strip():
+        print("Error: Template is empty")
         return
 
     if not attendees():
-        print("No data provided, no output files generated.") 
+        print("Error: Attendees is empty") 
         return
-    
     inv = []
 
     for attendee in attendees:
         atendee_data = {key: attendee.get(key, "N/A") for key in attendee}
         new_template = Template.safe_substitute(atendee_data)
-
+        inv.append(new_template)
         return inv
 
     def check_make_file(num):
