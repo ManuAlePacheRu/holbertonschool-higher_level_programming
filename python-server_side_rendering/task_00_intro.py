@@ -10,11 +10,11 @@ def generate_invitations(template, attendees):
     if not isinstance(attendees, list):
         print("Error: attendees  is not a list of dictionaries")
         return
-    if not template.strip():
+    if not template.strip:
         print("Error: Template is empty")
         return
 
-    if not attendees():
+    if not attendees:
         print("Error: Attendees is empty") 
         return
     inv = []
