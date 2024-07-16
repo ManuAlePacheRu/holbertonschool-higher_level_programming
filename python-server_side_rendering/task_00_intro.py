@@ -32,7 +32,7 @@ def generate_invitations(template, attendees):
         date_rep = event_rep.replace("{event_date}", get_date)
         loc_rep = date_rep.replace("{event_location}", get_location)
         
-        output_filename = f'output_{idx+1}.txt'
+        output_filename = f'output_{idx}.txt'
         output_path = os.path.join(output_directory, output_filename)
         
         with open(output_path, 'w') as file:
