@@ -16,11 +16,7 @@ def generate_invitations(template, attendees):
     
     with open('template.txt', 'r') as f:
         temp_base = f.read()
-    
-    output_directory = 'output_files/'
-    
-    if not os.path.exists(output_directory):
-        os.makedirs(output_directory)
+
     for idx, person in enumerate(attendees):
         get_name = person.get("name") if person.get("name") else "N/A"
         get_event = person.get("event_title") if person.get("event_title") else "N/A"
@@ -32,8 +28,8 @@ def generate_invitations(template, attendees):
         date_rep = event_rep.replace("{event_date}", get_date)
         loc_rep = date_rep.replace("{event_location}", get_location)
         
-        output_filename = f'output_{idx}.txt'
-        output_path = os.path.join(output_directory, output_filename)
+        output_filename = f'output_{idx+1}.txt'
+        output_path = os.path.join(output_filename)
         
         with open(output_path, 'w') as file:
             file.write(loc_rep)
