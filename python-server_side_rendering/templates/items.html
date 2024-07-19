@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Items List</title>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <ul>
+        {% if not item_list %}
+        {{No items found}}
+        {else}
+        {% for item in item_list  %}
+        {{item}}
+        {% endfor %}
+        {% endif %}
+    </ul>
+</body>
+</html>
