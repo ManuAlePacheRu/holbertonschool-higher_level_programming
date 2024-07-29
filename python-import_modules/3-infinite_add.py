@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
-import sys
-
-if __name__ == "__main__":
-    argv = sys.argv
-    result = 0
-    for arg in argv[1:]:
-        result += int(arg)
-    print(result)
+from sys import argv
+arg = len(argv)
+cant = 0
+if arg > 0:
+    for i in argv[1:]:
+        cant += int(i)
+    if __name__ == "__main__":
+        print("{}".format(cant))
