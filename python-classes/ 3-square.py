@@ -1,43 +1,39 @@
-#!/usr/bin/python3
 """
-This module defines a class Square.
-
-Attributes:
-    __size (int): The size of the square (private attribute).
+square class
 """
 
 
 class Square:
     """
-    A class that defines a square.
+    Clase que define un cuadrado.
 
-    Attributes:
-        __size (int): The size of the square (private attribute).
+    Atributos privados de instancia:
+        __size: tamaño del cuadrado
+
+    Métodos:
+        __init__(self, size): Constructor.
+        area(self): Calcula el área del cuadrado.
     """
 
     def __init__(self, size=0):
         """
-        The constructor for the Square class.
+        Constructor de la clase Square.
 
-        Args:
-            size (int): The size of the square. Defaults to 0.
+        Parámetros:
+            size (int): Tamaño del cuadrado.
         """
-
-        # Check if size is an integer
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-
-        # Check if size is less than 0
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
+        self.__size = size
 
-        # If size is an integer and it's not less than 0, assign it to __size
-        else:
-            self.__size = size
-        
-    def area(self):  # Public instance method that calculates the area of the square
+    def area(self):
         """
-        This is a public instance method that calculates and returns the area of the square.
-        The area of a square is calculated by multiplying its side size by itself (size * size).
+        Calcula el área del cuadrado.
+
+        Retorna:
+            int: Área del cuadrado.
         """
-        return self.__size * self.__size
+        area = self.__size * self.__size
+        return area
