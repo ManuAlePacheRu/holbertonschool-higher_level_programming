@@ -1,11 +1,79 @@
 #!/usr/bin/python3
-"""Start link class to table in database 
-"""
-import sys
-from model_state import Base, State
 
-from sqlalchemy import (create_engine)
+'''
+    Testing Databases with MySQLdb (python)
+'''
+
+from sys import argv
+from typing import Any
+# import sqlalchemy
+import MySQLdb
+from MySQLdb import cursors
+
+
+def makeConnection(
+    argv: list[str]
+) -> MySQLdb.Connection:
+    '''
+        Make a connection with the database and returns it.
+    '''
+
+    db: MySQLdb.Connection = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
+    )
+
+    return db
+
+
+def makeAndPrintQuery(
+    cursor: cursors.Cursor,
+    query: str
+) -> None:
+    '''
+        Makes query and prints result as a tuple.
+    '''
+
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
+
+def runQueries(
+    db: MySQLdb.Connection,
+    argv: str
+) -> None:
+    '''
+        Part that defines all queries to run.
+    '''
+
+    cursor = db.cursor()
+
+    query = '''SELECT A.id, A.name, B.name
+               FROM cities A
+               LEFT JOIN states B
+               ON A.state_id = B.id
+               ORDER BY A.id ASC'''
+    makeAndPrintQuery(db, cursor, query)
+
+    cursor.close()
+
+
+def main() -> None:
+    '''
+        Calls all functions
+    '''
+
+    db = makeConnection(argv)
+
+    runQueries(db, argv)
+
+    db.close()
+
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+    main()
