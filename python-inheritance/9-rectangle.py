@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
         """
             Exeption raised
         """
-        
+
         return self._width * self._height
 
     def integer_validator(self, name, value):
