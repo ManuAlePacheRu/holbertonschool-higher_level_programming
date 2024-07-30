@@ -9,7 +9,7 @@ class BaseGeometry:
     """
         Class with an area method
     """
-    
+
     def area(self):
         """
             Exeption raised
