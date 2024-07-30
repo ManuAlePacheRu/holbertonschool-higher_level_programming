@@ -10,6 +10,8 @@ class Mylist(list):
         Class creation
     """
     def print_sorted(self):
-        """sorted list"""
+        """
+            My list module sorted list
+        """
         sorted_list = sorted(self)
         print(sorted_list)
