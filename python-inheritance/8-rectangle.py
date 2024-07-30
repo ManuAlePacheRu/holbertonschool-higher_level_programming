@@ -7,9 +7,9 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class BaseGeometry:
+class Rectangle(BaseGeometry):
     """
-        Class with an area method
+        A rectangle class with methods
     """
 
     def area(self):
