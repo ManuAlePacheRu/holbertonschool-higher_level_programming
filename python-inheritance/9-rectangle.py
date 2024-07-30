@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
         A rectangle class with methods
     """
 
-    def area(self, side_a, side_b):
+    def area(self):
         """
             Exeption raised
         """
